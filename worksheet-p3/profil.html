@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Game Favorit</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Koleksi Game Favorit</h1>
+
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="#koleksi">Koleksi Game</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#tambah">Tambah Game</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="koleksi">
+            <h2>Koleksi Game Favorit</h2>
+
+            <p>
+                Berikut adalah beberapa game yang saya sukai dan sering dimainkan.
+            </p>
+
+            <table>
+                <caption>Daftar Game Favorit</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Nama Game</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Platform</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">EA Sports FC 26</th>
+                        <td>Sports</td>
+                        <td>PC</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">MotoGP</th>
+                        <td>Racing</td>
+                        <td>PC</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">GTA V</th>
+                        <td>Action</td>
+                        <td>PC</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+    <img src="ea-sports-fc-26.jpg"
+         alt="Sampul game EA Sports FC 26"
+         width="640"
+         height="360"
+         loading="lazy"
+         style="max-width: 100%; height: auto;">
+
+    <figcaption>EA Sports FC 26</figcaption>
+</figure>
+
+        </section>
+
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+
+            <p>
+                Halaman ini dibuat untuk menampilkan koleksi game favorit
+                sekaligus menerapkan struktur HTML5 semantik.
+            </p>
+
+            <div id="tambah">
+    <h3>Tambah Game Favorit</h3>
+
+    <form action="/simpan" method="post">
+
+        <p>
+            <label for="nama-game">Nama Game:</label>
+            <input type="text" id="nama-game" name="nama-game" required>
+        </p>
+
+        <p>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+        </p>
+
+        <p>
+            <label for="platform">Platform:</label>
+            <input type="text" id="platform" name="platform" required>
+        </p>
+
+        <button type="submit">Tambah Game</button>
+
+    </form>
+</div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>GHIFARI PUTRA PRATAMA · 25523186 · 2026</p>
+    </footer>
+
+</body>
+</html>
