@@ -1,35 +1,41 @@
-/* Tema gelap mengikuti pengaturan sistem */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: var(--gray-950);
-        --color-fg: var(--gray-100);
-        --color-surface: var(--gray-800);
-        --color-border: var(--gray-300);
-        --color-primary: var(--blue-300);
-        --color-danger: #FF6B6B;
-        --color-focus: var(--blue-300);
-    }
-}
+/* ==============================
+   TOGGLE TEMA
+   ============================== */
 
-/* Tombol tema manual */
 .pengalih-tema {
     position: absolute;
+    width: 1px;
+    height: 1px;
     opacity: 0;
-    pointer-events: none;
+    overflow: hidden;
 }
 
 .tombol-tema {
-    display: inline-block;
-    margin-bottom: var(--space-2);
-    padding: var(--space-2) var(--space-4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-bottom: var(--space-3);
+    padding: 0.5rem 0.9rem;
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    color: var(--color-fg);
+    border-radius: var(--radius-full);
     background: var(--color-surface);
+    color: var(--color-fg);
+    font-size: var(--text-sm);
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/* Saat toggle belum dicentang: gunakan tema terang */
+.tombol-tema:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* ==============================
+   TEMA TERANG DEFAULT
+   ============================== */
+
 :root:has(#tema:not(:checked)) {
     --color-bg: var(--gray-100);
     --color-fg: var(--gray-950);
@@ -40,7 +46,10 @@
     --color-focus: var(--blue-700);
 }
 
-/* Saat toggle dicentang: gunakan tema gelap */
+/* ==============================
+   TEMA GELAP MANUAL
+   ============================== */
+
 :root:has(#tema:checked) {
     --color-bg: var(--gray-950);
     --color-fg: var(--gray-100);
@@ -49,4 +58,97 @@
     --color-primary: var(--blue-300);
     --color-danger: #FF6B6B;
     --color-focus: var(--blue-300);
+}
+
+/* ==============================
+   TRANSISI
+   ============================== */
+
+body,
+.kartu,
+#tambah,
+.form-kolom input,
+.form-kolom select,
+.form-kolom textarea,
+.tombol-tema {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+/* ==============================
+   SLIDESHOW GAME
+   ============================== */
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-1);
+    background: var(--color-surface);
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: pergantian-slide 12s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.7rem 1rem;
+    background: rgb(0 0 0 / 65%);
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+}
+
+@keyframes pergantian-slide {
+
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    38% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

@@ -6,28 +6,34 @@
     margin: 0;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
+    min-height: 100vh;
     font-family: system-ui, "Segoe UI", Roboto, sans-serif;
     font-size: var(--text-md);
     line-height: 1.6;
     color: var(--color-fg);
     background: var(--color-bg);
     padding: var(--space-4);
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 h1 {
-    font-size: var(--text-3xl);
+    font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.15;
+    letter-spacing: -0.03em;
 }
 
 h2 {
@@ -39,6 +45,17 @@ h3 {
     font-size: var(--text-md);
 }
 
+p {
+    color: var(--color-fg);
+}
+
 main p {
     max-width: 60ch;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
