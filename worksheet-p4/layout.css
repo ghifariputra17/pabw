@@ -1,5 +1,15 @@
-header {
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.navbar {
     max-width: 1100px;
+    width: 100%;
     margin-inline: auto;
     padding-block: var(--space-4);
     border-bottom: 1px solid var(--color-border);
@@ -13,7 +23,7 @@ header {
     flex-wrap: wrap;
 }
 
-header h1 {
+.navbar h1 {
     color: var(--color-primary);
 }
 
@@ -41,13 +51,29 @@ nav a:hover {
     color: var(--color-surface);
 }
 
-main {
-    max-width: 1100px;
-    margin-inline: auto;
+.isi {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    width: 100%;
+}
+
+.sisi h2 {
+    color: var(--color-primary);
+}
+
+.sisi nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.utama {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding-block: 2.5rem;
+    min-width: 0;
+    width: 100%;
 }
 
 section {
@@ -61,14 +87,13 @@ section h2 {
 }
 
 .katalog {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: var(--space-4);
     width: 100%;
 }
 
 .kartu {
-    flex: 1 1 16rem;
     width: 100%;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -79,12 +104,12 @@ section h2 {
 }
 
 figure {
+    position: relative;
     width: 100%;
     max-width: 520px;
+    aspect-ratio: 16 / 9;
     margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
+    overflow: hidden;
 }
 
 figure img {
@@ -104,7 +129,7 @@ figcaption {
 
 #tambah {
     width: 100%;
-    max-width: 700px;
+    max-width: 100%;
     margin-inline: auto;
     padding: 1.5rem;
     background: var(--color-surface);
@@ -120,9 +145,16 @@ figcaption {
 
 footer {
     max-width: 1100px;
+    width: 100%;
     margin-inline: auto;
     padding-block: var(--space-4);
     border-top: 1px solid var(--color-border);
     text-align: center;
     font-size: var(--text-sm);
 }
+
+#tentang p {
+    max-width: none;
+    width: 100%;
+}
+

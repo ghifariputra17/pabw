@@ -3,6 +3,7 @@ table {
     border-collapse: collapse;
     overflow: hidden;
     border-radius: var(--radius-md);
+    table-layout: fixed;
 }
 
 caption {
@@ -16,6 +17,7 @@ td {
     padding: 0.9rem 1rem;
     text-align: left;
     border-bottom: 1px solid var(--color-border);
+    overflow-wrap: anywhere;
 }
 
 thead th {
@@ -97,4 +99,10 @@ input:user-invalid {
 
 .form-kolom:has(input:user-invalid) .pesan-galat {
     display: block;
+}
+
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-4);
 }
