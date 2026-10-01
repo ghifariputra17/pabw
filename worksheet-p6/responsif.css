@@ -1,0 +1,43 @@
+/* Dasar: berlaku di semua lebar */
+body {
+    width: 100%;
+    min-width: 0;
+}
+
+.isi {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+.katalog {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+}
+
+/* Tablet: galeri dua kolom */
+@media (min-width: 48rem) {
+    .katalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: galeri tiga kolom */
+@media (min-width: 60rem) {
+    .katalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
