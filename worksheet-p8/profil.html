@@ -25,7 +25,7 @@
 
             <div class="header-baris">
 
-                <h1>Koleksi Game Favorit</h1>
+                <h1 id="judul-halaman"></h1>
 
                 <nav aria-label="Navigasi utama">
                     <ul>
@@ -45,51 +45,31 @@
 
                 <section id="koleksi">
 
-                    <h2>Koleksi Game Favorit</h2>
+                    <h2 id="judul-koleksi"></h2>
 
-                    <p>
-                        Berikut adalah beberapa game yang saya sukai dan sering dimainkan.
-                    </p>
+                    <p id="deskripsi-koleksi"></p>
 
                     <div class="katalog">
 
                         <div class="table-wrap">
-                        <table class="kartu papan">
 
-                            <caption>Daftar Game Favorit</caption>
+                            <table class="kartu papan">
 
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nama Game</th>
-                                    <th scope="col">Genre</th>
-                                    <th scope="col">Platform</th>
-                                </tr>
-                            </thead>
+                                <caption>Daftar Game Favorit</caption>
 
-                            <tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nama Game</th>
+                                        <th scope="col">Genre</th>
+                                        <th scope="col">Platform</th>
+                                    </tr>
+                                </thead>
 
-                                <tr>
-                                    <th scope="row">EA Sports FC 26</th>
-                                    <td>Sports</td>
-                                    <td>PC</td>
-                                </tr>
+                                <tbody id="daftar-game"></tbody>
 
-                                <tr>
-                                    <th scope="row">MotoGP</th>
-                                    <td>Racing</td>
-                                    <td>PC</td>
-                                </tr>
+                            </table>
 
-                                <tr>
-                                    <th scope="row">GTA V</th>
-                                    <td>Action</td>
-                                    <td>PC</td>
-                                </tr>
-
-                            </tbody>
-
-                                                </table>
-                    </div>
+                        </div>
 
                     </div>
 
@@ -104,7 +84,7 @@
                                 height="360"
                                 loading="lazy">
 
-                            <span>EA Sports FC 26</span>
+                            <span class="nama-slide"></span>
 
                         </div>
 
@@ -117,7 +97,7 @@
                                 height="360"
                                 loading="lazy">
 
-                            <span>MotoGP</span>
+                            <span class="nama-slide"></span>
 
                         </div>
 
@@ -130,7 +110,7 @@
                                 height="360"
                                 loading="lazy">
 
-                            <span>GTA V</span>
+                            <span class="nama-slide"></span>
 
                         </div>
 
@@ -141,9 +121,9 @@
                 <section id="tentang">
 
                     <h2>Tentang Saya</h2>
-		<p>
-    Di sini saya menampilkan beberapa game favorit yang sering saya mainkan, seperti EA Sports FC 26, MotoGP, dan GTA V, lengkap dengan informasi genre dan platform dari masing-masing game agar koleksi ini lebih mudah dikenali.
-		</p>
+
+                    <p id="tentang-saya"></p>
+
                     <div id="tambah">
 
                         <h3>Tambah Game Favorit</h3>
@@ -222,8 +202,8 @@
 
     </div>
 
+    <script type="module" src="js/app.js"></script>
+
 </body>
 
 </html>
-
-
