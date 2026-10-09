@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Game Favorit</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="navbar">
+
+            <input type="checkbox" id="tema" class="pengalih-tema">
+            <label for="tema" class="tombol-tema">Tema gelap</label>
+
+            <div class="header-baris">
+
+                <h1 id="judul-halaman"></h1>
+
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li><a href="#koleksi">Koleksi Game</a></li>
+                        <li><a href="#tentang">Tentang Saya</a></li>
+                        <li><a href="#tambah">Tambah Game</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </header>
+
+        <div class="isi">
+
+            <main class="utama">
+
+                <section id="koleksi">
+
+                    <h2 id="judul-koleksi"></h2>
+
+                    <p id="deskripsi-koleksi"></p>
+
+                    <div class="katalog">
+
+                        <div class="table-wrap">
+
+                            <table class="kartu papan">
+
+                                <caption>Daftar Game Favorit</caption>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nama Game</th>
+                                        <th scope="col">Genre</th>
+                                        <th scope="col">Platform</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="daftar-game"></tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <figure class="slideshow">
+
+                        <div class="slide">
+                            <img
+                                src="ea-sports-fc-26.jpg"
+                                alt="Sampul game EA Sports FC 26"
+                                width="640"
+                                height="360"
+                                loading="lazy">
+
+                            <span class="nama-slide"></span>
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="motogp.jpg"
+                                alt="Sampul game MotoGP"
+                                width="640"
+                                height="360"
+                                loading="lazy">
+
+                            <span class="nama-slide"></span>
+                        </div>
+
+                        <div class="slide">
+                            <img
+                                src="gta-v.jpg"
+                                alt="Sampul game GTA V"
+                                width="640"
+                                height="360"
+                                loading="lazy">
+
+                            <span class="nama-slide"></span>
+                        </div>
+
+                    </figure>
+
+                </section>
+
+                <section id="proyek">
+
+                    <h2>Proyek Saya</h2>
+
+                    <div id="filter">
+                        <button type="button" data-kategori="semua" class="aktif">
+                            Semua
+                        </button>
+
+                        <button type="button" data-kategori="web">
+                            Web
+                        </button>
+
+                        <button type="button" data-kategori="data">
+                            Data
+                        </button>
+                    </div>
+
+                    <ul id="daftar"></ul>
+
+                    <p id="pesan-kosong" hidden>
+                        Tidak ada proyek pada kategori itu.
+                    </p>
+
+                </section>
+
+                <section id="tentang">
+
+                    <h2>Tentang Saya</h2>
+
+                    <p id="tentang-saya"></p>
+
+                    <div id="tambah">
+
+                        <h3>Tambah Game Favorit</h3>
+
+                        <form id="form-game">
+
+                            <div class="form-kolom">
+
+                                <label for="nama-game">Nama Game:</label>
+
+                                <input
+                                    type="text"
+                                    id="nama-game"
+                                    name="nama-game"
+                                    required
+                                    aria-describedby="galat-nama-game">
+
+                                <p
+                                    class="pesan-galat"
+                                    id="galat-nama-game"
+                                    aria-live="polite">
+                                    Isi nama game.
+                                </p>
+
+                            </div>
+
+                            <div class="form-kolom">
+
+                                <label for="genre">Genre:</label>
+
+                                <input
+                                    type="text"
+                                    id="genre"
+                                    name="genre"
+                                    required
+                                    aria-describedby="galat-genre">
+
+                                <p
+                                    class="pesan-galat"
+                                    id="galat-genre"
+                                    aria-live="polite">
+                                    Isi genre game.
+                                </p>
+
+                            </div>
+
+                            <div class="form-kolom">
+
+                                <label for="platform">Platform:</label>
+
+                                <input
+                                    type="text"
+                                    id="platform"
+                                    name="platform"
+                                    required
+                                    aria-describedby="galat-platform">
+
+                                <p
+                                    class="pesan-galat"
+                                    id="galat-platform"
+                                    aria-live="polite">
+                                    Isi platform game.
+                                </p>
+
+                            </div>
+
+                            <button type="submit">
+                                Tambah Game
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+        <footer>
+
+            <p>
+                GHIFARI PUTRA PRATAMA · 25523186 · 2026
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/dom.js"></script>
+
+</body>
+
+</html>
